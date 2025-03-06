@@ -13,3 +13,11 @@ user = User.find_by(email_address: "admin@test.com", role: :admin)
 if !user
   User.create(email_address: "admin@test.com", password: "admin1234", role: :admin)
 end
+
+post = Post.find_by(title: "The Glorious Mountain Ever!")
+
+if !post
+  post = Post.create(title: "The Glorious Mountain Ever!",
+    body: "Some mountain")
+  post.banner_image.attach(io: File.open(Rails.root.join("public/mountain.jpg")), filename: "mountain.jpg")
+end
