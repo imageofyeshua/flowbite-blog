@@ -19,6 +19,7 @@ gem "kamal", require: false
 gem "thruster", require: false
 gem "image_processing", "~> 1.2"
 gem "friendly_id", "~> 5.5.0"
+gem "sitemap_generator", "~> 6.3"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
