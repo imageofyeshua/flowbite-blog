@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :show]
 
   namespace :admin do
-    resources :posts, only: [:new, :create]
+    resources :posts, only: [:new, :create, :edit, :update, :destroy]
   end
 
   get "up" => "rails/health#show", as: :rails_health_check
